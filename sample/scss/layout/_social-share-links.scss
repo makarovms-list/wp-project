@@ -1,0 +1,80 @@
+.social-share-link {
+  margin: 0 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  transition: $transition;
+  &:last-child {
+    margin-right: 0px;
+  }
+  &:hover {
+    transition: $transition;
+  }
+  .i-svg {
+    color: white;
+  }
+  &.linkedin {
+    background-color: #0077b5;
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 119, 181, 0.25);
+    }
+    .i-svg {
+      width: 20px;
+      height: 18px;
+    }
+  }
+  &.facebook {
+    background-color: #1877f2;
+    &:hover {
+      box-shadow: 0 4px 10px rgba(24, 119, 242, 0.25);
+    }
+    .i-svg {
+      width: 10px;
+      height: 20px;
+    }
+  }
+  &.twitter {
+    background-color: #55acee;
+    &:hover {
+      box-shadow: 0 4px 10px rgba(85, 172, 238, 0.25);
+    }
+    .i-svg {
+      width: 22px;
+      height: 18px;
+    }
+  }
+  &.instagram {
+    background-color: #fd445b;
+    &:hover {
+      box-shadow: 0 4px 10px rgba(253, 68, 91, 0.25);
+    }
+    .i-svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  &.youtube {
+    background-color: #ff0000;
+    &:hover {
+      box-shadow: 0 4px 10px rgba(255, 0, 0, 0.25);
+    }
+    .i-svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  &.s-mail {
+    background-color: #3e74e7;
+    &:hover {
+      box-shadow: 0 4px 15px rgba(62, 116, 231, 0.35);
+    }
+    .i-svg {
+      width: 26px;
+      height: 20px;
+    }
+  }
+}
+

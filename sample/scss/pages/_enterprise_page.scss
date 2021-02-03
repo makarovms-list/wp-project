@@ -1,0 +1,55 @@
+.enterprise-page {
+  .who-we-are-block {
+    .achievements-list {
+      @include media-down(ct) {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: relative;
+        margin-top: 50px;
+        display: block;
+        .achievement {
+          width: 100%;
+          max-width: 100%;
+          padding: 0 15px;
+          border-radius: 0px;
+          box-shadow: none;
+          border-bottom: 1px solid #CAD3DE;
+          padding-bottom: 50px !important;
+          margin-bottom: 50px !important;
+        }
+        .achievement-wrapper {
+          margin-bottom: 0px !important;
+          &:last-child {
+            .achievement:last-child {
+              border-bottom: 0px;
+              margin-bottom: 30px !important;
+            }
+          }
+          .achievement .a-icon {
+            margin-top: 0px;
+          } 
+        }
+      }
+    }
+  }
+  
+  .enterprises-benefits-block {
+    margin-top: 85px;
+    @include media-down(ct) {
+      margin-top: 0px;
+    }
+  } 
+  .partners-block {
+    .line-title {
+      @include media-down(ct) {
+        &:after {
+          background-color: #ED2E45;
+        }
+      }
+    }
+  }
+}
+

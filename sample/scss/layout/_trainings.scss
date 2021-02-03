@@ -1,0 +1,187 @@
+.trainings-block {
+  @include media-down(ct) {
+    padding: 0 20px;
+  }
+  .training-block {
+    margin-top: 80px;
+    .t-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include media-down(ct) {
+        margin-bottom: 5px;
+      }
+      .t-more-link {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3E74E7;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-top: 5px;
+        position: relative;
+        transition: $transition;
+        padding-right: 4px;
+        @include media-down(ct) {
+          display: none;
+        }
+        &:hover {
+          transition: $transition;
+          font-size: 19px;
+        }
+        position: relative;
+        .i-svg {
+          width: 13px;
+          height: 8px;
+          margin-top: 3px;
+          margin-left: 5px;     
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    .t-block-description {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #727E8E;
+      margin-top: 18px;
+      @include media-down(ct) {
+        text-align: center;
+      }
+    }
+    .trainings {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #CAD3DE;
+      @include media-down(ct) {
+        justify-content: space-around;
+        padding-bottom: 0px;
+        border-bottom: 0px;
+      }
+      @include media-down(sm) {
+        margin-top: 45px;
+      }
+      .training {
+        width: 270px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:nth-child(4n+4) {
+          margin-right: 0px;
+        }
+        @include media-down(ct) {
+          margin-right: 0px;
+          margin: 0px 20px;
+          margin-bottom: 40px;
+          &:nth-child(4n+4) {
+            margin: 0px 20px;
+            margin-bottom: 40px;
+          }
+        }
+        @include media-down(sm) {
+          margin: 0px;
+          margin-bottom: 50px;
+          &:nth-child(4n+4) {
+            margin: 0px;
+            margin-bottom: 50px;
+          }
+        }
+        @include media-down(sm) {
+          width: 100%;
+        }
+        .t-image {
+          display: block;
+          border-radius: 10px;
+          @include media-down(sm) {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .t-title {
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          color: #000000;
+          margin-top: 19px;
+        }
+        .t-description {
+          font-size: 18px;
+          line-height: 22px;
+          color: #727E8E;
+          margin-top: 10px;
+          padding-right: 10px;
+          @include media-down(ct) {
+            padding: 0px;
+          }
+        }
+        .t-link {
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 22px;
+          color: #3E74E7;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          margin-top: 15px;
+          position: relative;
+          transition: $transition;
+          padding-right: 4px;
+          &:hover {
+            transition: $transition;
+            font-size: 19px;
+          }
+          position: relative;
+          .i-svg {
+            width: 13px;
+            height: 8px;
+            margin-top: 3px;
+            margin-left: 5px;     
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+    .t-more-link-mobile-wrapper {
+      display: none;
+      @include media-down(ct) {
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+        border-bottom: 1px solid #CAD3DE;
+        border-top: 1px solid #CAD3DE;
+        height: 84px;
+        box-sizing: border-box;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: relative;
+      }
+      .t-more-link-mobile {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3E74E7;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+        transition: $transition;
+        padding-right: 4px;
+        position: relative;
+        .i-svg {
+          width: 13px;
+          height: 8px;
+          margin-top: 5px;
+          margin-left: 8px;     
+        }
+      }
+    }
+  }
+}

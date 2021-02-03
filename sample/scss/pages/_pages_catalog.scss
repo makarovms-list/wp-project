@@ -1,0 +1,16 @@
+.pages-catalog {
+  .content {
+    .container .vc_column-inner {
+      padding: 0px; 
+    }
+  }
+  .products-block {
+    .products-slider-wrapper .products-slider .product-wrapper .product {
+      min-height: 500px;
+      @include media-down(xs) {
+        min-height: 0px;
+      }
+    }
+  }
+}
+

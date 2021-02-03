@@ -1,0 +1,4 @@
+<a style="background-color: <?php print $template_data['element_fields']['background_color']; ?>" href="<?php print $template_data['element_fields']['link']; ?>" class="wpb_content_element resource-banner <?php print (isset($template_data['element_fields']['extra_class'])) ? $template_data['element_fields']['extra_class'] :""; ?>">
+    <div class="bi-content"><?php print $template_data['element_fields']['content']; ?></div>
+    <div class="btn with-icon <?php print $template_data['element_fields']['button_color']; ?>"><svg class="i-svg icon-download"><use xlink:href="#icon-download"></use></svg><?php print $template_data['element_fields']['button_title']; ?></div>
+</a>

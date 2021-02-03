@@ -1,0 +1,18 @@
+.smart-pos-page {
+  .product-features-v2-block {
+    background: none;
+    border-bottom: 1px solid #CAD3DE;
+    padding-bottom: 60px;
+    @include media-down(sm) {
+      padding-bottom: 20px;
+    }
+  }
+  .product-description-block {
+    @include media-down(sm) {
+      padding-top: 50px;
+    }
+  }
+  .configure-solution-block {
+    border-bottom: 1px solid #CAD3DE;
+  }
+}

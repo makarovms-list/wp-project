@@ -1,0 +1,89 @@
+body {
+  .ajax-load-more-wrap .alm-btn-wrap {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    @include media-down(lg) {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      border-top: 1px solid #CAD3DE;
+      width: calc(50% - 180px);
+      height: 1px;
+      @include media-down(sm) {
+        display: none;
+      }
+    }  
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      border-top: 1px solid #CAD3DE;
+      width: calc(50% - 180px);
+      height: 1px;
+      @include media-down(sm) {
+        display: none;
+      }
+    }
+    &.done {
+      visibility: hidden !important;
+      height: 0px;
+      transition: none;
+      margin-bottom: 0px;
+      .alm-load-more-btn {
+        transition: none;
+      }
+    }
+    @include media-down(lg) {
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      height: 83px;
+    }
+    .alm-load-more-btn {
+      background: none;
+      color: #3E74E7;
+      position: relative;
+      border: 1px solid #3E74E7;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      background-color: white;
+      width: 296px;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        box-shadow: none;
+      }
+      &:hover {
+        background-color: #E0EEFF;
+      }
+      &.loading {
+        padding-left: 20px;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.customer-support-page {
+  .product-features-v2-block {
+    background: none;
+    border-bottom: none;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+    .content-area {
+      border-bottom: 1px solid #CAD3DE;
+      padding-bottom: 60px;
+      @include media-down(sm) {
+        padding-bottom: 0px;
+      }
+    }
+    .p-features-list .feature-wrapper .feature {
+      justify-content: flex-start;
+      padding: 24px 16px;
+      padding-bottom: 25px;
+      
+      @include media-down(sm) {
+        padding: 30px 40px;
+        padding-bottom: 55px;
+      }
+      .f-title {
+        min-height: 72px;
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        @include media-down(sm) {
+          min-height: 0px;
+        }
+      }
+    }
+  }
+}
+

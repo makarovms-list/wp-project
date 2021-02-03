@@ -1,0 +1,13 @@
+.form-block {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  @include media-down(ct) {
+    padding-bottom: 80px;
+  }
+}
