@@ -1,7 +1,0 @@
-.blog {
- .container.with-side-block-wrapper {
-    @include media-down(lg) {
-      margin-top: 48px;
-    }
-  }
-}
