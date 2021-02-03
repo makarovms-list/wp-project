@@ -1,0 +1,130 @@
+  .petrosoft-select {
+    font-weight: bold;
+    height: 44px;
+    min-width: 200px;
+    position: relative;
+    @include media-down(ct) {
+      display: none;
+    }
+  }
+  .selectric-petrosoft-select {
+    min-width: 200px;
+    .selectric .label {
+      text-transform: uppercase;
+    }
+    .button {
+      transition: $transition;
+    }
+    .selectric-items {
+      transition: $transition;
+      border: 0px;
+      box-shadow: 0px 6px 25px rgba(77, 87, 98, 0.35);
+      border-radius: 6px;
+      li {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #727E8E;
+        padding: 0px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        height: 44px;
+        padding: 0 25px;
+        position: relative;
+        transition: $transition;
+        &:before {
+          content: '';
+          left: 0px;
+          height: 100%;
+          position: absolute;
+          background: none;
+          width: 5px;
+          transition: $transition;
+        }
+        &:after {
+          content: "";
+          background: url(/wp-content/uploads/2019/12/Group-42.png) center center no-repeat;
+          position: absolute;
+          width: 8px;
+          height: 14px;
+          background-size: contain;
+          right: 20px;
+        }
+        &:hover, &.selected {
+          background-color: #E7F6FF;
+          color: #3E74E7;
+          transition: $transition;
+          &:before {
+            background-color: #3E74E7;
+            transition: $transition;
+          }
+        }
+      }
+    }
+    &.selectric-open {
+      .button {
+        transform: rotate(180deg);
+        transition: $transition;
+      }
+    }
+  }
+  
+  
+  
+   
+  .petrosoft-checkbox {
+    display: none !important;
+    &+label, &+span {
+      user-select: none;
+    }
+    &+label::before, &+span::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #A6A6A6;
+      background-color: white;
+      border-radius: 2px;
+      margin-right: 7px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-position: 2px 2px;
+    }
+    /* hover state */
+    &:not(:disabled):not(:checked)+label:hover::before {
+      
+    }
+    /* active state */
+    &:not(:disabled):active+label::before {
+
+    }
+    /* focus state */
+    &:focus+label::before {
+      
+    }
+    /* focus unchecked state */
+    &:focus:not(:checked)+label::before {
+
+    }
+    /* checked state */
+    &:checked+label::before, &:checked+span::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.5L3 6L7 1' stroke='%234E4E4E'/%3E%3C/svg%3E");
+    }
+    /* disabled state */
+    &:disabled+label::before, &:disabled+span::before  {
+      background-color: #e9ecef;
+    }
+  }
+  
+  form {
+    label.error {
+      display: block;
+      color: white;
+      padding: 10px;
+      border: 1px solid white;
+      margin-top: 5px;
+    }
+  }

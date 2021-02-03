@@ -1,0 +1,188 @@
+.main-page-banner-block {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: none;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  height: calc(100vh - 102px);
+  overflow: hidden;
+  @include media-down(ct) {
+    height: auto !important;
+    padding: 0px;
+    padding-bottom: 55px;
+    padding-top: 80px;
+    background-image: none !important;
+  }
+  &.video-banner {
+    .content-area {
+      img {
+        display: none;
+        @include media-down(ct) {
+          display: block; 
+        }
+      }
+    }
+    .video-wrapper {
+      @include media-down(ct) {
+        display: none;
+      }
+    }
+    .main-page-banner-video {
+      min-width: 100%; 
+      min-height: 100%; 
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  .content-area {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include media-down(ct) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .content-part {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 444px;
+      padding-right: 20px;
+      max-width: 470px;
+      align-items: baseline;
+      @include media-down(ct) {
+        width: 100%;
+        min-width: 0px;
+        max-width: 100%;
+        align-items: center;
+        padding-right: 0px;
+      }
+      h1 {
+        font-family: 'Lato', sans-serif;
+        font-size: 38px;
+        line-height: 46px;
+        font-weight: bold;
+        
+        @include media-down(ct) {
+          text-align: center;
+          font-size: 38px;
+          line-height: 46px;
+        }
+      }
+      .mb-text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 10px;
+        font-weight: 400;
+        @include media-down(ct) {
+          text-align: center;
+        }
+      }
+      .mb-btn-wrapper {
+        margin-top: 30px;
+        @include media-down(sm) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+      }
+      .btn {
+        margin-bottom: 15px;
+        margin-right: 15px;
+        @include media-down(sm) {
+          width: 100%;
+          max-width: 320px;
+          margin-right: 0px;
+        }
+        &.fixed {
+          position: fixed;
+          z-index: 100;
+          background-color: #3162CC;
+          overflow: hidden;
+          border-radius: 0px 0px 15px 15px;
+/*          transition: none;
+          transition: background 0.3s linear 0s;*/
+          @include media-down(sm) {
+            min-width: 100vw;
+            left: 0px; 
+            border-radius: 0px;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1.5em;
+            height: 100%;
+            background-color: #A1BFFF;
+            transform:skewX(-45deg);
+            left: -60px;
+            transition: background-color 0.5s ease-out;
+          }
+          &:hover {
+            background-color: #1752D0;
+            transition: background-color 0.5s ease-out;
+          }
+          &.fixed-animated {
+            &:before {
+              opacity: 1;
+              transition: all 0.5s ease-out;
+              left: calc(100% + 40px);
+            }
+          }
+        }
+      }
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      @include media-down(ct) {
+        margin-top: 60px;
+      }
+    }
+  }
+  .mb-go-down-wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 25px);
+    padding-top: 100px;
+    @include media-down(ct) {
+      display: none;
+    }
+    .mb-go-down {
+      width: 50px;
+      height: 50px;
+      color: white;
+      cursor: pointer;
+      animation: mb-bounce 2s;
+      animation-iteration-count: infinite;
+      @keyframes mb-bounce {
+        0%,25%,50%,75%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-6px);
+        }
+      }
+    }
+  }
+}
+

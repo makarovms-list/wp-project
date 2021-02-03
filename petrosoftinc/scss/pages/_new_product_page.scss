@@ -1,0 +1,17 @@
+.product-page-content {
+  @include media-down(lg) {
+    margin-top: 48px;
+  }
+  .full-width-bg-block+.product-page-footer {
+    margin-top: -24px;
+  }
+  .product-page-content-block {
+    padding-left: 328px;
+    padding-right: 0px;
+    @include media-down(lg) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+

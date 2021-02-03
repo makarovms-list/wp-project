@@ -1,0 +1,112 @@
+.content .vc_row .vc_row.resource-block-horizontal-element {
+  padding: 0px;
+  .vc_column-inner {
+    @include media-down(lg) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+.resource-block-horizontal-element {
+  padding: 0px;
+  .post-content-wrapper {
+    @include media-down(lg) {
+      margin-top: 32px;
+    }
+  }
+  .post-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .r-image {
+      .r-image-link {
+        overflow: hidden;
+        display: block;
+        border-radius: 4px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+        transition: $transition;
+        &:hover {
+          transform: scale(1.1);
+          transition: $transition;
+        }
+      }
+    }
+  .r-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 16px;
+    padding-bottom: 32px;
+  }
+  .r-fields {
+    display: flex;
+    flex-direction: column;
+  }
+  .r-category {
+    color: #8491A3;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    transition: $transition;
+    font-weight: bold;
+    margin-bottom: 8px;
+     &:hover {
+       transition: $transition;
+       text-decoration: none;
+       color: #3E74E7;
+     }
+   }
+  .r-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: #212B36;
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
+  .r-text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2E3B4D;
+    text-decoration: none;
+    margin-bottom: 8px;
+    p:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .r-more-link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3E74E7;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 6px;
+    position: relative;
+    transition: $transition;
+    align-self: flex-end;
+    width: 100%;
+    text-transform: uppercase;
+    &:hover {
+      transition: $transition;
+      font-size: 16px;
+    }
+    position: relative;
+    .i-svg {
+      width: 12px;
+      height: 7px;
+      margin-top: -1px;
+      margin-left: 6px;  
+      transform: rotate(-90deg);
+    }
+  }
+}
+

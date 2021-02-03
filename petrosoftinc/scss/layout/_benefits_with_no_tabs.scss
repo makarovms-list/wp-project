@@ -1,0 +1,179 @@
+.benefits-with-no-tabs-block {
+  padding: 80px 0px;
+  padding-bottom: 60px;
+  @include media-down(sm) {
+    padding: 80px 40px;
+    padding-bottom: 0px;
+  }
+  .b-main-description {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #727E8E;
+    margin-top: 40px;
+    @include media-down(ct) {
+      text-align: center;
+    }
+    @include media-down(sm) {
+      margin-top: 21px;
+    }
+  }
+  .benefits {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    @include media-down(ct) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include media-down(sm) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0px;
+    }
+    &.benefits-per-row-4 {
+      .benefit-wrapper {
+        &:nth-child(4n+4) {
+          margin-right: 0px;
+        }
+        &:nth-child(5n+5) {
+          margin-right: 20px;
+        }
+        @include media-down(ct) {
+          &:nth-child(4n+4) {
+            margin-right: 5px;
+            margin-left: 5px;
+          }
+        }
+        @include media-down(sm) {
+          &:nth-child(4n+4) {
+            margin: 0px;
+            margin-bottom: 20px;
+          }
+        }
+        .benefit {
+          width: 270px;
+          padding: 18px 30px;
+          @include media-down(sm) {
+            width: 100%;
+            padding: 0px 20px;
+            padding-bottom: 45px;
+            padding-top: 30px;
+          }
+        }
+      }
+    }
+    &.benefits-per-row-3 {
+      .benefit-wrapper {
+        &:nth-child(3n+3) {
+          margin-right: 0px;
+        }
+        &:nth-child(5n+5) {
+          margin-right: 20px;
+        }
+        @include media-down(ct) {
+          &:nth-child(3n+3) {
+            margin-right: 5px;
+            margin-left: 5px;
+          }
+        }
+        @include media-down(sm) {
+          &:nth-child(3n+3) {
+            margin: 0px;
+            margin-bottom: 20px;
+          }
+        }
+        .benefit {
+          width: 360px;
+          padding: 18px 30px;
+          @include media-down(sm) {
+            width: 100%;
+            padding: 0px 20px;
+            padding-bottom: 45px;
+            padding-top: 30px;
+          }
+          .b-title {
+            max-width: 220px;
+            @include media-down(sm) {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .benefit-wrapper {
+      margin-right: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      &:nth-child(5n+5) {
+        margin-right: 0px;
+      }
+      @include media-down(ct) {
+        margin-right: 5px;
+        margin-left: 5px;
+        &:nth-child(5n+5) {
+          margin-right: 5px;
+          margin-left: 5px;
+        }
+      }
+      @include media-down(sm) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0px;
+        margin-bottom: 20px;
+        &:nth-child(5n+5) {
+          margin: 0px;
+          margin-bottom: 20px;
+        }
+        &:last-child {
+          .benefit {
+            border-bottom: 0px;
+          }
+        }
+      }
+      .benefit {
+        width: 212px;
+        min-height: 222px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        transition: $transition;
+        padding: 18px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 25px rgba(132, 145, 163, 0.15);
+        cursor: pointer;
+        @include media-down(sm) {
+          border-radius: 0px;
+          width: 100%;
+          border-bottom: 1px solid #CAD3DE;
+          box-shadow: none;
+          padding: 0px 20px;
+          padding-bottom: 45px;
+          padding-top: 30px;
+          min-height: 0px;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        &:hover {
+          transition: $transition;
+        }
+        .b-title {
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          color: #000000;
+          font-weight: bold;
+          @include media-down(sm) {
+            max-width: 260px;
+          }
+        }
+      }
+    }
+  }
+}
+

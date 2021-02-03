@@ -1,0 +1,149 @@
+.how-it-works-block {
+  padding: 80px 0px;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  @include media-down(ct) {
+    padding: 74px 40px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+  }
+  .content-area {
+    @include media-down(ct) {
+      padding: 0px;
+    }
+  }
+  .h-description {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #727E8E;
+    margin-top: 40px;
+    @include media-down(ct) {
+      text-align: center;
+    }
+    @include media-down(sm) {
+      margin-top: 21px;
+    }
+  }
+  .h-steps {
+    margin-top: 30px;
+    display: flex;
+    @include media-down(ct) {
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      flex-direction: column;
+      margin-top: 0px;
+    }
+    .h-step {
+      background: #FFFFFF;
+      box-shadow: 0px 4px 25px rgba(132, 145, 163, 0.15);
+      border-radius: 10px;
+      width: 270px;
+      min-height: 234px;
+      box-sizing: border-box;
+      padding: 41px 25px;
+      margin-right: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &:last-child {
+        margin-right: 0px;
+      }
+      @include media-down(ct) {
+        box-shadow: none;
+        background: none;
+        width: 100%;
+        margin-right: 0px;
+        border-bottom: 1px solid #CAD3DE;
+        padding: 64px 0px;
+        padding-bottom: 60px;
+        min-height: 0px;
+        border-radius: 0px;
+        &:first-child {
+          padding-top: 40px;
+        }
+        &:last-child {
+          border-bottom: 0px;
+        }
+      }
+      .h-step-arrow {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(77, 87, 98, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: calc(50% - 25px);
+        left: -35px;
+        border-radius: 100%;
+        @include media-down(ct) {
+          top: -25px;
+          left: calc(50% - 25px);
+          z-index: 1;
+        }
+        .i-svg {
+          width: 19px;
+          height: 15px;
+          color: #3E74E7;
+          @include media-down(ct) {
+            transform: rotate(90deg); 
+          }
+        }
+      }
+      .h-s-icon {
+        display: block;
+      }
+      .h-s-text {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #000000;
+        text-align: center;
+        margin-top: 30px;
+        @include media-down(ct) {
+          margin-top: 20px;
+          padding: 0px 40px;
+          max-width: 400px;
+          box-sizing: border-box;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .h-w-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    @include media-down(ct) {
+      margin-top: 0px;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      padding: 0 35px;
+      padding-bottom: 80px;
+      box-sizing: border-box;
+      .btn {
+        padding: 16px 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,62 @@
+.job-subscribe-block {
+  background: #3E74E7;
+  color: white;
+  padding: 65px 0px;
+  @include media-down(ct) {
+    padding: 70px 0;
+  }
+  .content-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-down(ct) {
+      flex-direction: column;
+    }
+    .j-s-image {
+      display: block;
+      @include media-down(ct) {
+        width: 100%;
+        max-width: 419px;
+      }
+    }
+    .j-s-form {
+      width: 564px;
+      @include media-down(ct) {
+        width: 100%;
+        max-width: 564px;
+        margin-top: 8px;
+      }
+      .j-s-title {
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 41px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        @include media-down(ct) {
+          text-align: center;
+        }
+      }
+      .j-s-sub-title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.8);
+        @include media-down(ct) {
+          text-align: center;
+          margin-top: 18px;
+        }
+      }
+      .wpcf7 {
+        margin-top: 30px;
+        .btn {
+          min-width: 309px;
+          border: 0px;
+          @include media-down(ct) {
+            width: 100%;
+            min-width: 0px;
+          }
+        }
+      }
+    }
+  }
+}

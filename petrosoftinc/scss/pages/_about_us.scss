@@ -1,0 +1,32 @@
+.about-us-page {
+  .content {
+    .container .vc_column-inner {
+      padding: 0px; 
+    }
+  }
+  .achievements {
+    background: none;
+    height: auto;
+    padding-top: 80px;
+    .content-area {
+      padding-bottom: 80px;
+      border-bottom: 1px solid #CAD3DE;
+      @include media-down(ct) {
+        padding-bottom: 0px;
+      }
+      .achievements-list {
+        margin-top: 95px;
+        .achievement {
+          padding: 0px 16px;
+          .a-title {
+            font-size: 32px;
+            line-height: 38px;
+          }
+        }
+      }
+    }
+  }
+  .pages-catalog-block {
+    padding-top: 0px;
+  }
+}

@@ -1,0 +1,42 @@
+.curbside-pickup-page {
+  .main-page-banner-block  {
+    .content-area {
+      position: static;
+      .content-part {
+        max-width: 510px;
+        h1 {
+          max-width: 330px;
+        }
+      }
+      &>img {
+        position: absolute;
+        bottom: 0px;
+        right: 216px;
+        @include media-down(dlp) {
+          right: 0px;
+        }
+        @include media-down(ct) {
+          position: static;
+          margin-bottom: -55px;
+        }
+      }
+    }
+  }
+  .product-features-v2-block {
+    background: white;
+  }
+  .product-description-block .product-description-slider-block .p-slider-wrapper .p-slider .p-slide.right-side .ps-background-image {
+    right: -258px;
+  }
+  .clients-slider-block .clients-slider .c-slide-content-wrapper .content-area .cs-text-part {
+    max-width: 605px;
+    .cs-text {
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      @include media-down(ct) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+

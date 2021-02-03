@@ -1,0 +1,191 @@
+.blog.resources {
+  .b-logo {
+    .b-logo-img {
+      background: url(../images/resources.png);
+      background-size: cover;
+      top: 4px;
+      width: 40px;
+      height: 50px;
+    }
+  }
+  .blog-menu-area.fixed-blog .blog-menu-wrapper .blog-menu-container .b-logo .b-logo-img {
+    width: 25px;
+    height: 31px;
+    margin-bottom: 5px;
+  }
+  .p-category-link {
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    padding: 0 19px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 5px 0px;
+    margin-right: 10px;
+  }
+
+  .content .content-area main {
+    .p-data {
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+      margin-top: 10px;
+      @include media-down(ct) {
+        display: none;
+      }
+      .p-category-link {
+        margin-right: 10px;
+      }
+    }
+    .p-content-container {
+      margin-bottom: 50px;
+      @include media-down(ct) {
+        margin-bottom: 40px;
+      }
+      .p-main-image-container {
+        position: relative;
+        float: left;
+        margin-right: 30px;
+        border-radius: 10px;
+        @include media-down(ct) {
+          float: none;
+          margin-right: 0px;
+          margin-top: 20px;
+          img {
+            max-width: 360px;
+            margin: 0 auto;
+          }
+        }
+      }
+      .text-content {
+        margin-top: 0px;
+        @include media-down(ct) {
+          margin-top: 30px;
+        }
+      }
+    }
+    .resources-form-container {
+      background-color: #EEF4FA;
+      padding: 50px;
+      box-sizing: border-box;
+      @include media-down(ct) {
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding: 60px 20px;
+      }
+    }
+    .p-sharing-block {
+      margin-top: 0px;
+    }
+  }
+  
+  .resources-related-posts {
+    .rp-title {
+      font-size: 32px;
+      @include media-down(ct) {
+        font-size: 34px;
+        &:after {
+          background-color: #11A9F2;
+        }
+      }
+    }
+    .rp-image-link {
+      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
+      margin-bottom: 30px;
+      @include media-down(ct) {
+        max-width: 360px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+    }
+    .rp-block-title {
+      margin-bottom: 10px;
+    }
+    .p-category-link {
+      @include media-down(ct) {
+        display: none;
+      }
+    }
+    .rp-more-link {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #3E74E7;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin-top: 17px;
+      position: relative;
+      transition: $transition;
+      padding-right: 18px;
+      &:hover {
+        transition: $transition;
+        font-size: 19px;
+      }
+      position: relative;
+      .i-svg {
+        width: 13px;
+        height: 8px;
+        margin-top: 3px;
+        margin-left: 5px;     
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  
+  &.resources-category {
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .all-posts .alm-reveal .post {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .p-image {
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
+        margin-bottom: 40px;
+      }
+      .p-category-link {
+        align-self: flex-start;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+      .p-title {
+        text-decoration: none;
+      }
+      .p-text {
+        text-decoration: none;
+        min-height: 110px;
+        @include media-down(ct) {
+          min-height: 0px;
+        }
+      }
+      
+    }
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tags-container {
+      .selectric-petrosoft-select {
+        min-width: 260px;
+      }
+      @include media-down(ct) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,197 @@
+.achievements {
+  height: 389px;
+  background-color: #F5FAFF;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include media-down(ct) {
+    background: none;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .content-area {
+    @include media-down(ct) {
+      padding: 0 15px;
+      margin: 45px 0px;
+    }
+  }
+  .a-main-description {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #727E8E;
+    margin-top: 35px;
+    @include media-down(ct) {
+      text-align: center;
+      margin-top: 28px;
+    }
+  }
+  
+  .achievements-list {
+    display: flex;
+    margin-top: 70px;
+    @include media-down(ct) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include media-down(sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &.achievements-count-3 {
+      .achievement-wrapper {
+        margin-right: 30px;
+        @include media-down(ct) {
+          margin-right: 0px;
+        }
+        .achievement {
+          width: 360px;
+          .a-description {
+            max-width: 100%;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    &.achievements-count-6 {
+      .achievement-wrapper {
+        margin-right: 32px;
+        @include media-down(ct) {
+          margin-right: 0px;
+        }
+        .achievement {
+          width: 187px;
+          min-height: 155px;
+          @include media-down(ct) {
+            width: 100%;
+            min-width: 260px;
+            max-width: 360px;
+            padding-bottom: 20px;
+          }
+          .a-icon {
+            width: 84px;
+            height: auto;
+            display: block;
+            margin-top: -42px;
+            @include media-down(ct) {
+              width: 110px;
+              margin-top: -45px;
+            }
+          }
+          .a-title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 10px;
+            @include media-down(ct) {
+              margin-top: 0px;
+              font-size: 38px;
+              line-height: 46px;
+            }
+            .icon-star {
+              font-size: 19px;
+              @include media-down(ct) {
+                font-size: 26px;
+              }
+            }
+          }
+          .a-description {
+            max-width: 100%;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            @include media-down(ct) {
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+    .achievement-wrapper {
+      margin-right: 20px;
+      display: flex;
+      @include media-down(ct) {
+        margin-right: 0px;
+        margin-bottom: 60px;
+      }
+      @include media-down(sm) {
+        width: 100%;
+        max-width: 360px;
+      }
+      &:last-child {
+        margin-right: 0px;
+        margin-bottom: 0px;
+        @include media-down(ct) {
+          margin-bottom: 60px;
+        }
+      }
+      .achievement {
+        width: 212px;
+        min-height: 212px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        transition: $transition;
+        padding: 0 18px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 25px rgba(132, 145, 163, 0.15);
+        @include media-down(ct) {
+          width: 320px;
+        }
+        @include media-down(sm) {
+          width: 100%;
+          max-width: 360px;
+        }
+        &:hover {
+          transition: $transition;
+        }
+        .a-icon {
+          margin-top: -45px;
+        }
+        .a-title {
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 48px;
+          text-align: center;
+          position: relative;
+          .subtitle {
+            font-size: 18px;
+            line-height: 21px;
+            font-family: 'Roboto', sans-serif;
+            position: absolute;
+            top: -14px;
+            left: 0px;
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .a-description {
+          font-size: 18px;
+          line-height: 21px;
+          text-align: center;
+          color: #000000;
+          margin-top: 5px;
+          max-width: 150px;
+          @include media-down(ct) {
+            max-width: 168px;
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

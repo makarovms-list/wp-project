@@ -1,0 +1,177 @@
+.news-block {
+  padding-bottom: 45px;
+  padding-top: 45px;
+  @include media-down(ct) {
+    padding: 40px 0px;
+    padding-top: 30px;
+  }
+  .n-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-down(ct) {
+      margin-bottom: 5px;
+    }
+   .n-link {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2C5DE5;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      position: relative;
+      transition: $transition;
+      padding-right: 8px;
+      text-decoration: none;
+      @include media-down(ct) {
+        display: none;
+      }
+      &:hover {
+        transition: $transition;
+        font-size: 17px;
+      }
+      position: relative;
+      .i-svg {
+        width: 10px;
+        height: 6px;
+        margin-top: 3px;
+        margin-left: 6px;   
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  
+  .n-posts {
+    .wpb_column {
+      margin-top: 20px;
+      @include media-down(sm) {
+        margin-top: 32px;
+      }
+    }
+    .post {
+      .p-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 100%;
+        @include media-down(sm) {
+          min-width: 0px;
+          width: 100%;
+        }
+        img {
+          display: block;
+          border-radius: 10px;
+          transform: scale(1);
+          transition: $transition;
+          &:hover {
+            @include media-up(ct) {
+              transform: scale(1.1);
+              transition: $transition;
+            }
+          }
+          @include media-down(ct) {
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+      .p-date {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3E74E7;
+        margin-top: 25px;
+        width: 100%;
+        @include media-down(ct) {
+          margin-top: 20px;
+        }
+      }
+      .p-title {
+        color: #000000;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 2px;
+        width: 100%;
+        text-decoration: none;
+        transition: $transition;
+        display: block;
+        &:hover {
+          color: #3e74e7;
+          transition: $transition;
+        }
+      }
+      .p-text {
+        font-size: 16px;
+        line-height: 24px;
+        color: #282E37;
+        width: 100%;
+      }
+      .p-more-link {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: #2C5DE5;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-top: 6px;
+        position: relative;
+        transition: $transition;
+        padding-right: 8px;
+        align-self: flex-end;
+        width: 100%;
+        text-decoration: none;
+        &:hover {
+          transition: $transition;
+          font-size: 17px;
+        }
+        position: relative;
+        .i-svg {
+          width: 10px;
+          height: 6px;
+          margin-top: 3px;
+          margin-left: 6px;   
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+  .mobile-n-link {
+    display: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3E74E7;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 40px;
+    transition: $transition;
+    justify-content: center;
+    padding: 28px 0px;
+    border-bottom: 1px solid #CAD3DE;
+    border-top: 1px solid #CAD3DE;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    overflow: hidden;
+    @include media-down(ct) {
+      display: flex;
+    }
+    &:hover {
+      transition: $transition;
+      font-size: 19px;
+    }
+    position: relative;
+    .i-svg {
+      width: 13px;
+      height: 8px;
+      margin-top: 3px;
+      margin-left: 5px;     
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.video-block {
+  text-decoration: none;
+  color: #2E3B4D;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  &:hover {
+    text-decoration: none;
+  }
+  .vb-image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    .vb-image-play {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      &:hover {
+        .i-svg {
+          transform: scale(1.2);
+          transition: $transition;
+        }
+      }
+      .i-svg {
+        width: 64px;
+        height: 64px;
+        position: relative;
+        z-index: 1;
+        transform: scale(1);
+        transition: $transition;
+      }
+      .vb-overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #405380;
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+      }
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .vb-watch-text {
+    font-weight: normal;
+    color: #8491A3;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 16px;
+  }
+}

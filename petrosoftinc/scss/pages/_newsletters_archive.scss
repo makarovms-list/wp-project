@@ -1,0 +1,25 @@
+.newsletters-archive {
+  .archive-post {
+    .p-type {
+      color: #8491A3;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 8px;
+      transition: $transition;
+      &:hover {
+        text-decoration: none;
+        color: #3E74E7;
+        transition: $transition;
+      }
+    }
+    .p-image-link {
+      background-color: #F7F8FA;
+      padding: 32px 63px;
+      img {
+        box-shadow: 0px 16px 24px rgba(46, 59, 77, 0.16);
+      }
+    }
+  }
+}

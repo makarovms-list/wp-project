@@ -1,0 +1,195 @@
+.clients-slider-block {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  @include media-down(ct) {
+    height: auto;
+  }
+  .slick-dotted.slick-slider {
+    margin: 0px;
+  }
+  .clients-slider {
+    .c-slide-content-wrapper {
+      height: 600px;
+      background-size: cover;
+      @include media-down(ct) {
+        height: auto;
+      }
+      &.dark {
+        .content-area {
+          .c-slider-arrow {
+            border-color: #282E37;
+            .i-svg {
+              color: #282E37;
+            }
+          }
+          .cs-text-part {
+            color: #282E37;
+            .cs-text {
+              color: #282E37;
+            }
+          }
+        }
+      }
+      .content-area {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include media-down(ct) {
+          flex-direction: column;
+          padding-top: 60px;
+        }
+        .c-slider-nav-container {
+          @include media-down(ct) {
+            display: none;
+          }
+        }
+        &.right-side {
+          justify-content: flex-end;
+          .cs-photo {
+            right: auto;
+            left: 0px;
+          }
+        }
+        .c-slider-arrow {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border: 2px solid #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          color: white;
+          top: calc(50% - 25px);
+          left: -100px;
+          cursor: pointer;
+          &.slider-next {
+            right: -100px;
+            left: auto;
+            .i-svg {
+              transform: rotate(270deg);
+              margin: 0px;
+              margin-left: 4px;
+            }
+          }
+          .i-svg {
+            color: white;
+            width: 19px;
+            height: 13px;
+            transform: rotate(90deg);
+            margin-right: 4px;
+          }
+        }
+        .cs-text-part {
+          color: rgba(255, 255, 255, 0.7);
+          max-width: 445px;
+          display: flex;
+          flex-direction: column;
+          @include media-down(ct) {
+            max-width: 100%;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+          }
+          .cs-text {
+            font-size: 34px;
+            line-height: 41px;
+            font-family: 'latoheavy';
+            color: white;
+            @include media-down(ct) {
+              text-align: center;
+              font-size: 26px;
+              line-height: 31px;
+              br {
+                display: none;
+              }
+            }
+          }
+          .cs-name {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 25px;
+          }
+          .cs-post {
+            font-weight: 400;
+            font-size: 20px;
+            margin-top: 10px;
+            @include media-down(ct) {
+              text-align: center;
+            }
+          }
+          .btn {
+            margin-top: 25px;
+            align-self: baseline;
+            min-width: 297px;
+            @include media-down(ct) {
+              align-self: auto;
+            }
+            @include media-down(sm) {
+              width: 100%;
+              margin-top: 30px;
+            }
+          }
+        }
+        .cs-photo {
+          position: absolute;
+          right: 0px;
+          bottom: 0px;
+          max-height: 100%;
+          @include media-down(ct) {
+            position: static;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+        .c-bullets {
+          display: none;
+          position: relative;
+          margin-top: 18px;
+          .slick-dots {
+            display: flex;
+            position: static;
+            li {
+              width: 10px;
+              height: 10px;
+              background-color: rgba(255,255,255,.7);
+              border-radius: 100%;
+              &.slick-active {
+                background-color: white;
+              }
+              button {
+                &:before {
+                  display: none;
+                }
+              }
+            }
+          }
+          @include media-down(ct) {
+            display: block;
+          }
+          &.desktop-bullets {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            width: 100%;
+            bottom: 40px;
+            @include media-down(ct) {
+              display: none;
+            }
+            .slick-dots {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

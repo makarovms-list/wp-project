@@ -1,0 +1,13 @@
+.career-page {
+  .content {
+    .container .vc_column-inner {
+      padding: 0px; 
+    }
+  }
+  .benefits-block .b-tabs-header {
+    height: 200px;
+    @include media-down(ct) {
+      height: auto;
+    }
+  }
+}

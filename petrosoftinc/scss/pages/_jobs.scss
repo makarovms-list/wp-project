@@ -1,0 +1,410 @@
+.blog.jobs {
+  .b-logo {
+    .b-logo-img {
+      background: url(../images/jobs.png);
+      background-size: cover;
+      top: 4px;
+      height: 44px;
+    }
+  }
+  &.jobs-category {
+    .blog-menu-area {
+      &.fixed-blog .blog-menu-wrapper .blog-menu-container .blog-menu {
+        height: 54px;
+        @include media-down(ct) {
+          height: auto;
+        }
+      }
+    }
+/*    .line-title {
+    }*/
+    .all-jobs {
+      padding-top: 40px;
+      .job {
+        position: relative;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(132, 145, 163, 0.2);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 36px 50px;
+        padding-left: 54px;
+        overflow: hidden;
+        box-sizing: border-box;
+        @include media-down(ct) {
+          padding: 30px;
+          padding-top: 40px;
+          padding-bottom: 24px;
+        }
+        &:before {
+          content: '';
+          width: 7px;
+          left: 0px;
+          top: 0px;
+          height: 100%;
+          background-color: #3E74E7;
+          position: absolute;
+          @include media-down(ct) {
+            height: 7px;
+            width: 100%;
+          }
+        }
+        &.blue {
+          &:before {
+            background-color: $blue;
+          }
+        }
+        &.red {
+          &:before {
+            background-color: $red;
+          }
+        }
+        &.lilac {
+          &:before {
+            background-color: $lilac;
+          }
+        }
+        &.green {
+          &:before {
+            background-color: $green;
+          }
+        }
+        &.orange {
+          &:before {
+            background-color: $orange;
+          }
+        }
+        .j-title {
+          font-weight: bold;
+          font-size: 34px;
+          line-height: 41px;
+          display: flex;
+          align-items: center;
+          text-transform: capitalize;
+          color: #000000;
+        }
+        .j-text {
+          font-size: 18px;
+          line-height: 22px;
+          color: #727E8E;
+          margin-top: 20px;
+          @include media-down(ct) {
+            margin-top: 14px;
+          }            
+        }
+        .j-data {
+          margin-top: 27px;
+          padding-top: 20px;
+          border-top: 1px solid #CAD3DE;
+          display: flex;
+          justify-content: space-between;
+          @include media-down(ct) {
+            flex-direction: column;
+          }
+          .j-parameters {
+            display: flex;
+            align-items: center;
+            @include media-down(ct) {
+              flex-direction: column;
+            }
+            .j-param {
+              display: flex;
+              align-items: center;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 22px;
+              color: #000000;
+              margin-right: 40px;
+              @include media-down(ct) {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-right: 0px;
+              }
+            }
+            .j-icon {
+              width: 40px;
+              height: 40px;
+              background-color: #BACAE1;
+              border-radius: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: 13px;
+              min-width: 40px;
+              .i-svg {
+                color: white;
+                width: 20px;
+              }
+            }
+          }
+          .j-more-link {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: #3E74E7;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-top: 8px;
+            position: relative;
+            transition: $transition;
+            padding-right: 18px;
+            @include media-down(ct) {
+              padding-top: 16px;
+              border-top: 1px solid #CAD3DE;
+              margin-top: 10px;
+            }
+            &:hover {
+              transition: $transition;
+              font-size: 19px;
+            }
+            position: relative;
+            .i-svg {
+              width: 13px;
+              height: 8px;
+              margin-top: 3px;
+              margin-left: 5px;     
+              transform: rotate(-90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .selectric-job-category-filter {
+    font-weight: bold;
+    height: 44px;
+    min-width: 260px;
+    position: relative;
+    top: -12px;
+    margin-left: 25px;
+    text-transform: uppercase;
+    @include media-down(ct) {
+      display: none;
+    }
+    .button {
+      transition: $transition;
+    }
+    .selectric-items {
+      transition: $transition;
+    }
+    &.selectric-open {
+      .button {
+        transform: rotate(180deg);
+        transition: $transition;
+      }
+    }
+  }
+  .job-category-filter {
+    @include media-down(ct) {
+      display: none;
+    }
+  }
+  &.job-post {
+    .header-section {
+      margin: 50px 0px;
+      margin-bottom: 30px;
+      @include media-down(ct) {
+        margin: 0px;
+        margin-top: 20px;
+      }
+      .job-header-content.content-area {
+        display: block;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #CAD3DE;
+        @include media-down(ct) {
+          margin-top: 0px;
+          padding-bottom: 0px;
+          border: 0px;
+        }
+      }
+      h1 {
+        @include media-down(ct) {
+          text-align: left; 
+        }
+      }
+      .j-parameters {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        @include media-down(ct) {
+          flex-direction: column;
+        }
+        .j-param {
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 22px;
+          color: #000000;
+          margin-right: 40px;
+          @include media-down(ct) {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-right: 0px;
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
+        }
+        .j-icon {
+          width: 40px;
+          height: 40px;
+          background-color: #BACAE1;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 13px;
+          min-width: 40px;
+          .i-svg {
+            color: white;
+            width: 20px;
+          }
+        }
+      }
+    }
+    .job-application-form {
+      background: #EEF4FA;
+      padding: 45px 50px;
+      align-items: center;
+      margin-top: 60px;
+      @include media-down(ct) {
+        padding: 70px 30px;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: relative;
+        box-sizing: border-box;
+      }
+      .ja-title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin-bottom: 13px;
+        margin-top: 6px;
+      }
+      .ja-text {
+        font-size: 18px;
+        line-height: 22px;
+        color: #727E8E;
+        margin-bottom: 23px;
+      }
+      input[type="text"], input[type="email"] {
+        border: 1px solid #CAD3DE;
+      }
+      .selectric-wpcf7-select {
+        li {
+          &:before {
+            content: '';
+          }
+        }
+      }
+      .ja-button {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        @include media-down(ct) {
+          flex-direction: column;
+          margin-bottom: 10px;
+        }
+        .btn {
+          min-width: 300px;
+          margin-right: 24px;
+          @include media-down(ct) {
+            width: 100%;
+            min-width: 0px;
+            max-width: 320px;
+            margin-right: 0px;
+          }
+        }
+        .ja-button-text {
+          font-size: 12px;
+          line-height: 14px;
+          color: #727E8E;
+          max-width: 325px;
+          @include media-down(ct) {
+            max-width: 100%;
+            text-align: center;
+            margin-right: 0px;
+          }
+        }
+        &+p {
+          display: none;
+        }
+      }
+     
+    }
+    .content .content-area {
+      main {
+        .text-content {
+          margin-top: 0px;
+          @include media-down(ct) {
+            margin-top: 35px;
+          }
+        }
+        .p-sharing-block {
+          @include media-down(ct) {
+            margin-top: 20px;
+            margin-bottom: 0px;
+            border: 0px;
+          }
+        }
+      }
+      .right-sidebar {
+        width: 290px;
+        margin-top: 20px;
+        @include media-down(ct) {
+          width: 100%;
+        }
+        .job-subscribe-block {
+          padding: 60px 0;
+          padding-bottom: 45px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          @include media-down(ct) {
+            margin-bottom: 0px;
+            width: 100vw;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            position: relative;
+            border-radius: 0px;
+          }
+          .content-area {
+            flex-direction: column; 
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            .j-s-image {
+              width: 100%;
+              height: auto;
+            } 
+            .j-s-form {
+              width: 100%;
+              margin-top: 8px;
+              .j-s-title {
+                text-align: center;
+                font-size: 28px;
+                line-height: 34px;
+              }
+              .j-s-sub-title {
+                text-align: center;
+                margin-top: 8px;
+              }
+              .btn {
+                width: 100%;
+                min-width: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

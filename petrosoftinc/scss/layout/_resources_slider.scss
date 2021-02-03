@@ -1,0 +1,248 @@
+.resources-slider-block {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  overflow: hidden;
+  .r-slider-arrow {
+    position: absolute;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: white;
+    top: calc(50% - 22.5px);
+    left: -16px;
+    cursor: pointer;
+    @include media-down(ct) {
+      display: none;
+    }
+    &.slider-next {
+      right: -16px;
+      left: auto;
+      .i-svg {
+        transform: rotate(270deg);
+        margin: 0px;
+        margin-left: 4px;
+      }
+    }
+    .i-svg {
+      color: white;
+      width: 19px;
+      height: 13px;
+      transform: rotate(90deg);
+      margin-right: 4px;
+    }
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0px;
+  }
+  .resources-slider {
+    .r-slide {
+      .content-area {
+        position: relative;
+        height: 100%;
+        @include media-down(ct)  {
+          padding: 0px;
+        }
+      }
+      .r-slide-content-wrapper {
+        height: 387px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include media-down(ct) {
+          height: auto;
+          background: none;
+          background-color:  $dark_blue;
+          background-image: none !important;
+          &.blue {
+            background-color: $blue;
+          }
+          &.red {
+            background-color: $red;
+          }
+          &.lilac {
+            background-color: $lilac;
+          }
+          &.green {
+            background-color: $green;
+          }
+          &.orange {
+            background-color: $orange;
+          }
+        }
+        .r-mobile-image-wrapper {
+          display: none;
+          position: relative;
+          @include media-down(ct) {
+            display: block;
+            .r-bullets {
+              display: flex;
+              bottom: 18px;
+            }
+          }
+          .r-mobile-image {
+            @include media-down(ct) {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+        .r-slider-content-wrapper {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          height: 100%;
+          @include media-down(ct) {
+            justify-content: center;
+            padding: 0 15px;
+          }
+          .r-s-content-part {
+            width: 50%;
+            margin-bottom: 30px;
+            @include media-down(ct) {
+              width: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 30px 0px;
+              padding-top: 26px;
+              margin-bottom: 10px;
+            }
+            .r-s-resource {
+              display: flex;
+              align-items: center;
+              margin-bottom: 26px;
+              @include media-down(ct) {
+                margin-bottom: 21px;
+              }
+              .i-svg {
+                width: 24px;
+                height: 34px;
+                margin-right: 10px;
+                @include media-down(ct) {
+                  color: rgba(255,255,255,.7) !important; 
+                  width: 24px;
+                  height: 32px;
+                  margin-right: 10px;
+                }
+              }
+              .resource-name {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                @include media-down(ct) {
+                  color: rgba(255,255,255,.7) !important; 
+                  font-size: 17px;
+                  line-height: 21px;
+                }
+              }
+            }
+            .title-wrapper {
+              @include media-down(ct) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                br {
+                  display: none;
+                }
+              }
+              @include media-down(ct) {
+                max-width: 276px;
+              }
+            }
+            .r-s-title {
+              font-weight: bold;
+              font-size: 30px;
+              line-height: 38px;
+              @include media-down(ct) {
+                font-size: 24px;
+                line-height: 32px;
+                text-align: center;
+                color: #FFFFFF !important;
+              }
+            }
+            .r-s-subtitle {
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 20px;
+              margin-top: 17px;
+              @include media-down(ct) {
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                font-weight: normal;
+                color: #FFFFFF !important;
+                margin-top: 13px;
+              }
+            }
+            .btn {
+              margin-top: 31px;
+              padding: 12px 47.5px;
+              @include media-down(ct) {
+                background: white !important;
+                margin-top: 24px;
+                color: $dark_blue;
+                &.blue {
+                  color: $blue;
+                }
+                &.red {
+                  color: $red;
+                }
+                &.lilac {
+                  color: $lilac;
+                }
+                &.green {
+                  color: $green;
+                }
+                &.orange {
+                  color: $orange;
+                }
+              }
+            }
+          }
+        }
+        .r-bullets {
+          display: flex;
+          position: absolute;
+          justify-content: center;
+          width: 100%;
+          bottom: 27px;
+          @include media-down(ct) {
+            display: none;
+          }
+          .slick-dots {
+            display: flex;
+            position: static;
+            justify-content: center;
+            li {
+              width: 10px;
+              height: 10px;
+              background-color: #8FACE9;
+              border-radius: 100%;
+              @include media-down(ct) {
+                background-color: rgba(255,255,255,.7);
+              }
+              &.slick-active {
+                background-color: white;
+              }
+              button {
+                &:before {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
